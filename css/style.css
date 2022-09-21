@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+body {
+  background-color: hsl(30deg, 38%, 92%);
+  max-width: 1440px;
+}
+
+.card {
+  background-color: hsl(30deg, 38%, 92%);
+  border: none;
+}
+.card .row {
+  margin: 15% auto 0 20%;
+}
+.card .row img {
+  border-radius: 15px 0 0 15px;
+}
+.card .row .card-img-2 {
+  display: none;
+}
+.card .row ::selection {
+  background-color: hsl(158deg, 36%, 57%);
+}
+.card .row .c-left {
+  padding: 0;
+  min-width: 286px;
+}
+.card .row .c-right {
+  border-radius: 0 15px 15px 0;
+  min-width: 286px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.card .row .c-right h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsl(212deg, 21%, 14%);
+  padding-bottom: 0.5rem;
+}
+.card .row .c-right p, .card .row .c-right span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(228deg, 12%, 48%);
+}
+.card .row .c-right .price {
+  color: hsl(158deg, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.card .row .c-right .price .old-price {
+  font-size: 50%;
+  position: absolute;
+  padding-left: 0.5rem;
+}
+.card .row .c-right .card-footer-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card .row .c-right .card-footer-2 .btn {
+  width: 90%;
+  height: 3rem;
+  border: none;
+  background-color: hsl(158deg, 36%, 37%);
+}
+.card .row .c-right .card-footer-2 .btn span {
+  color: white;
+  padding-left: 0.5rem;
+}
+.card .row .c-right .card-footer-2 :hover {
+  background-color: #1E4034;
+}
+
+@media (max-width: 768px) {
+  .row .card-img {
+    display: none;
+  }
+  .row .card-img-2 {
+    display: block !important;
+    border-radius: 15px 15px 0 0 !important;
+    max-width: 350px;
+  }
+  .row .c-right {
+    max-width: 350px;
+    border-radius: 0 0 15px 15px !important;
+  }
+  .row .inline {
+    width: unset;
+    vertical-align: middle;
+  }
+}
+@media (min-width: 1440px) {
+  body {
+    background-color: #f0f0f0;
+    margin: 5% 5%;
+  }
+  body .card {
+    box-shadow: 5px 5px 8px #d9d9d9;
+    width: 80%;
+  }
+  body .card .row {
+    margin-bottom: 10%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
