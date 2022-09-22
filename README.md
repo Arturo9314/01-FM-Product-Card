@@ -4,4 +4,4 @@
 <h1 align="center">Hi 🐶, there</h1>
 <h3 align="center">This is my first project</h3>
 <p class="text-center">I builded this project using bootstrap for card formatting, I don't know how to align very well, but I did my best. Also used Sass to style it the way I understand Css best.</p>
-<p><a href="https://arturo9314.github.io/01-Product-Card/">View Product Preview Card<a/></p>
+<p><a href="https://arturo9314.github.io/01-Product-Card/" target="_blank" textstyle="text-decoration: none;">View Product Preview Card<a/></p>
