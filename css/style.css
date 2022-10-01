@@ -28,9 +28,6 @@ section {
 section ::selection {
   background-color: hsl(158deg, 36%, 57%);
 }
-section .section-title {
-  display: none;
-}
 
 aside, article {
   width: 50%;
