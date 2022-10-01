@@ -32,7 +32,7 @@ section{
     ::selection{
         background-color: hsl(158, 36%, 57%);
     }
-    h1{
+    .section-title{
         display: none;
     }
 }
@@ -62,7 +62,7 @@ article{
     .main-title{
         padding-bottom: 1rem;
     }
-    h2{
+    h1{
         font-family: 'Fraunces', serif;
         font-weight: 700;
         font-size: 2rem;

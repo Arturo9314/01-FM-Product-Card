@@ -28,7 +28,7 @@ section {
 section ::selection {
   background-color: hsl(158deg, 36%, 57%);
 }
-section h1 {
+section .section-title {
   display: none;
 }
 
@@ -61,7 +61,7 @@ article .header {
 article .main-title {
   padding-bottom: 1rem;
 }
-article h2 {
+article h1 {
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 2rem;
