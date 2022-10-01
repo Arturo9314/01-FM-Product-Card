@@ -32,6 +32,9 @@ section{
     ::selection{
         background-color: hsl(158, 36%, 57%);
     }
+    h1{
+        display: none;
+    }
 }
 aside, article{
     width: 50%;
@@ -59,7 +62,7 @@ article{
     .main-title{
         padding-bottom: 1rem;
     }
-    h1{
+    h2{
         font-family: 'Fraunces', serif;
         font-weight: 700;
         font-size: 2rem;
