@@ -1,107 +1,130 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
-body {
-  background-color: hsl(30deg, 38%, 92%);
-  max-width: 1440px;
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
 }
 
-.card {
+body {
+  font-size: 0.875rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   background-color: hsl(30deg, 38%, 92%);
-  border: none;
 }
-.card .row {
-  margin: 15% auto 0 20%;
-}
-.card .row img {
-  border-radius: 15px 0 0 15px;
-}
-.card .row .card-img-2 {
-  display: none;
-}
-.card .row ::selection {
-  background-color: hsl(158deg, 36%, 57%);
-}
-.card .row .c-left {
-  padding: 0;
-  min-width: 286px;
-}
-.card .row .c-right {
-  border-radius: 0 15px 15px 0;
-  min-width: 286px;
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 35.9375rem;
+  height: 26.875rem;
+  border-radius: 0.9375rem;
   background-color: hsl(0deg, 0%, 100%);
 }
-.card .row .c-right h1 {
+section ::selection {
+  background-color: hsl(158deg, 36%, 57%);
+}
+
+aside, article {
+  width: 50%;
+  min-width: 17.96875rem;
+}
+
+.card-img-mobile {
+  display: none;
+}
+
+.card-img {
+  width: 100%;
+  min-width: 17.96875rem;
+  border-radius: 0.9375rem 0 0 0.9375rem;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+article .header, article .main-title, article .body-text, article .price, article .footer-btn {
+  padding: 0 1.35rem;
+}
+article .header {
+  margin-bottom: 1rem;
+}
+article .main-title {
+  padding-bottom: 1rem;
+}
+article h1 {
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 2rem;
   color: hsl(212deg, 21%, 14%);
-  padding-bottom: 0.5rem;
 }
-.card .row .c-right p, .card .row .c-right span {
+article p, article span {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
   font-weight: 500;
   color: hsl(228deg, 12%, 48%);
 }
-.card .row .c-right .price {
+article .body-text {
+  padding-bottom: 1rem;
+}
+article .price {
+  display: flex;
+  align-items: center;
   color: hsl(158deg, 36%, 37%);
   font-family: "Fraunces", serif;
   font-weight: 500;
   font-size: 1.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
-.card .row .c-right .price .old-price {
+article .price .old-price {
   font-size: 50%;
-  position: absolute;
   padding-left: 0.5rem;
 }
-.card .row .c-right .card-footer-2 {
+article .button {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
-}
-.card .row .c-right .card-footer-2 .btn {
-  width: 90%;
+  width: 100%;
   height: 3rem;
   border: none;
+  border-radius: 0.625rem;
   background-color: hsl(158deg, 36%, 37%);
 }
-.card .row .c-right .card-footer-2 .btn span {
-  color: white;
+article .button span {
+  color: hsl(0deg, 0%, 100%);
   padding-left: 0.5rem;
 }
-.card .row .c-right .card-footer-2 :hover {
+article .button:hover {
   background-color: #1E4034;
 }
 
 @media (max-width: 768px) {
-  .row .card-img {
+  section {
+    flex-direction: column;
+    width: 21.875rem;
+    justify-content: center;
+    height: 100%;
+  }
+  .card-img {
     display: none;
   }
-  .row .card-img-2 {
-    display: block !important;
-    border-radius: 15px 15px 0 0 !important;
-    max-width: 350px;
+  .card-img-mobile {
+    display: block;
+    width: 100%;
+    border-radius: 0.9375rem 0.9375rem 0 0;
   }
-  .row .c-right {
-    max-width: 350px;
-    border-radius: 0 0 15px 15px !important;
+  aside, article {
+    width: 100%;
+    padding: 0;
   }
-  .row .inline {
-    width: unset;
-    vertical-align: middle;
-  }
-}
-@media (min-width: 1440px) {
-  body {
-    background-color: #f0f0f0;
-    margin: 5% 5%;
-  }
-  body .card {
-    box-shadow: 5px 5px 8px #d9d9d9;
-    width: 80%;
-  }
-  body .card .row {
-    margin-bottom: 10%;
+  article {
+    padding: 2rem 0;
   }
 }
 
