@@ -13,43 +13,42 @@ $price-color: hsl(158, 36%, 37%);
 }
 body{
     font-size: .875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $main-background;
+    min-height: 100vh;
 }
 main{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: $main-background;
-}
-section{
-    display: flex;
-    flex-direction: row;
-    width: 35.9375rem;
-    height: 26.875rem;
-    border-radius: .9375rem;
+    justify-content: center;
     background-color: $card-color;
+    border-radius: .9375rem;
+}
+
+figure, article{
+    width: 17.8125rem;
+    min-width: calc(35.9375rem/2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     ::selection{
         background-color: hsl(158, 36%, 57%);
     }
-}
-aside, article{
-    width: 50%;
-    min-width: calc(35.9375rem/2);
 }
 .card-img-mobile{
     display: none;
 }
 .card-img{
     width: 100%;
+    height: max-content;
     min-width: calc(35.9375rem / 2);
     border-radius: .9375rem 0 0 .9375rem;
 }
 
 article{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     .header, .main-title, .body-text, .price, .footer-btn{
         padding: 0 1.35rem;
     }
@@ -106,20 +105,22 @@ article{
     }
 }
 @media(max-width: 768px){
-    section{
+    main{
         flex-direction: column;
         width: 21.875rem;
         justify-content: center;
         height: 100%;
-
     }
     .card-img{
         display: none;
     }
-    .card-img-mobile{
-        display: block;
+    figure{
         width: 100%;
-        border-radius: .9375rem .9375rem 0 0;
+        .card-img-mobile{
+            display: block;
+            width: 100%;
+            border-radius: .9375rem .9375rem 0 0;
+        }
     }
     aside, article{
         width: 100%;

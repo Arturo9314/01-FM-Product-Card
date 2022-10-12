@@ -6,32 +6,31 @@
 
 body {
   font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30deg, 38%, 92%);
+  min-height: 100vh;
 }
 
 main {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: hsl(30deg, 38%, 92%);
-}
-
-section {
-  display: flex;
-  flex-direction: row;
-  width: 35.9375rem;
-  height: 26.875rem;
-  border-radius: 0.9375rem;
+  justify-content: center;
   background-color: hsl(0deg, 0%, 100%);
-}
-section ::selection {
-  background-color: hsl(158deg, 36%, 57%);
+  border-radius: 0.9375rem;
 }
 
-aside, article {
-  width: 50%;
+figure, article {
+  width: 17.8125rem;
   min-width: 17.96875rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+figure ::selection, article ::selection {
+  background-color: hsl(158deg, 36%, 57%);
 }
 
 .card-img-mobile {
@@ -40,15 +39,11 @@ aside, article {
 
 .card-img {
   width: 100%;
+  height: max-content;
   min-width: 17.96875rem;
   border-radius: 0.9375rem 0 0 0.9375rem;
 }
 
-article {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 article .header, article .main-title, article .body-text, article .price, article .footer-btn {
   padding: 0 1.35rem;
 }
@@ -105,7 +100,7 @@ article .button:hover {
 }
 
 @media (max-width: 768px) {
-  section {
+  main {
     flex-direction: column;
     width: 21.875rem;
     justify-content: center;
@@ -114,7 +109,10 @@ article .button:hover {
   .card-img {
     display: none;
   }
-  .card-img-mobile {
+  figure {
+    width: 100%;
+  }
+  figure .card-img-mobile {
     display: block;
     width: 100%;
     border-radius: 0.9375rem 0.9375rem 0 0;
